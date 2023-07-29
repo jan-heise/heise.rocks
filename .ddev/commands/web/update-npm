@@ -1,0 +1,6 @@
+#!/bin/bash
+
+npm update
+
+printf "\n"
+echo -e "\e[92mNPM Packages successfully updated ✓\e[39m"

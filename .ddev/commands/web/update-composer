@@ -1,0 +1,7 @@
+#!/bin/bash
+
+composer update
+composer bump
+
+printf "\n"
+echo -e "\e[92mComposer successfully updated and bumped ✓\e[39m"

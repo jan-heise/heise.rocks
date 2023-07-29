@@ -1,0 +1,8 @@
+#!/bin/bash
+
+composer install
+npm install
+
+printf "\n"
+echo -e "\e[92mSetup completed ✓\e[39m"
+

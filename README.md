@@ -8,7 +8,7 @@
 
 1. Clone repo, access folder
     ```sh
-    git clone git@gitlab.com:dasministerium.com-werbeagentur/dasministerium.com/kirby-2023.git && cd dasministerium
+    git clone git@github.com:jan-heise/heise.rocks.git heise && cd heise
     ```
 2. Copy, rename and edit `.env` file
     ```sh
@@ -26,16 +26,11 @@
     ```sh
     ddev setup
     ```
-6. Update stage variables and domain info in the DDEV `update-content` command located in `.ddev/commands/web`.
-7. Download `content` folder from stage
-    ```sh
-    ddev update-content
-    ```
 
 ### Build process
 
+-   `ddev dev` to start the development server
 -   `ddev build` to run the build process
--   `ddev watch` to run the watcher
 
 ### Utilities
 
@@ -44,7 +39,7 @@
 
 ## DDEV Links
 
-| Service    | URL                                |
-| :--------- | :--------------------------------- |
-| web        | https://dasministerium.local      |
-| Mailhog    | https://dasministerium.local:8026 |
+| Service    | URL                      |
+| :--------- |:-------------------------|
+| web        | https://heise.local      |
+| Mailhog    | https://heise.local:8026 |
