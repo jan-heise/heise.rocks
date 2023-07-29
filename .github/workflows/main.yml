@@ -13,6 +13,9 @@ jobs:
       with:
         node-version: '18'
 
+    - name: Use checkout
+      uses: actions/checkout@v3
+
     - name: Use Composer
       uses: php-actions/composer@v6
       with:
@@ -21,7 +24,6 @@ jobs:
 
     - name: Build Project
       run: |
-        composer update
         npm install
         npm run build
 
