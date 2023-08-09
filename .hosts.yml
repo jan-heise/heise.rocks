@@ -1,0 +1,19 @@
+hosts:
+  localhost:
+    local: true
+
+  .base: &base
+    forwardAgent: true
+    sshOptions:
+      UserKnownHostsFile: /dev/null
+      StrictHostKeyChecking: no
+
+  staging.heise.rocks:
+    <<: *base
+    hostname: w00c8680.kasserver.com
+    remote_user: ssh-w01e3cd1
+    labels:
+      stage: staging
+    branch: development
+    deploy_path: /www/htdocs/w0176bcd/web/staging.heise.rocks/
+    php: /usr/bin/php81
