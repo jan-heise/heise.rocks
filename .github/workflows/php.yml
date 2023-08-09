@@ -34,5 +34,5 @@ jobs:
       - name: Deploy
         uses: deployphp/action@v1
         with:
-          dep: deploy staging
+          dep: deploy stage=staging
           private-key: ${{ secrets.PRIVATE_KEY }}
