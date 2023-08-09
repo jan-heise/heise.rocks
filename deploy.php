@@ -39,17 +39,15 @@ task('failed', [
 
 desc(title: 'Deploy your project');
 task('deploy', [
-    'deploy:info',
-    'deploy:setup',
-    'deploy:lock',
-    'deploy:release',
-    'rsync',
-    'deploy:shared',
-    'deploy:clear_paths',
-    'deploy:symlink',
-    'deploy:unlock',
-    'deploy:cleanup',
-    'deploy:success',
+    'deploy:prepare',
+    'deploy:vendors',
+    'artisan:storage:link',
+    'artisan:config:cache',
+    'artisan:route:cache',
+    'artisan:view:cache',
+    'artisan:event:cache',
+    'artisan:migrate',
+    'deploy:publish',
 ]);
 
 after(task: 'deploy:failed', do: 'failed');
